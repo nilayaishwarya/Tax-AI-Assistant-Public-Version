@@ -1,0 +1,196 @@
+.nav-link{
+
+  color: white;
+}
+
+.navbar-custom { 
+  background-color: #86BC25; 
+} 
+.navbar-toggler-icon{
+
+color: black;
+}
+.navbar-toggler{
+color: white;
+}
+
+#mybutton{
+background-color: #86BC25;
+/* margin: 40px; */
+  color:white;
+  border-radius: 60px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid #86BC25;
+  
+}
+
+#mybutton {
+  overflow: hidden;
+}
+
+#mybutton::after {
+  /*background-color: #f00;*/
+  height: 100%;
+  left: -35%;
+  top: 0;
+  transform: skew(50deg);
+  transition-duration: 0.6s;
+  transform-origin: top left;
+  width: 0;
+}
+
+#mybutton:hover:after {
+  height: 100%;
+  width: 135%;
+}
+
+.output{
+  color:white;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.canvas{
+  text-align: center;
+}
+
+#canvas{
+  width: 95% !important;
+  height: 420px !important;
+  margin: 35px auto 0;
+  padding-bottom: 15px;  
+ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+ border-radius: 2px; 
+}
+
+#canvas:hover{  
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+}
+
+body{
+  background-color: black;
+}
+
+
+.microphonebutton{
+  color: white;
+}
+.navbar-brandy{
+  color: black;
+}
+.navbar-toggler.collapsed{
+
+  color: black;
+}
+
+.dot{
+  color: #86BC25;
+}
+
+.typewriter{
+
+  /* padding-top: 5em; */
+  display: flex;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+ .hints{ display: none;}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: verdana;
+  /* font-size: 20; */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* border-right: .15em solid orange; The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */  
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+#logo{
+  height: 50px;
+    width: 190px;
+    padding-left: 18px;
+    padding-right: 20px;
+}
+
+#mydiv{
+  box-sizing: content-box;  
+  width: 800px;
+  /* height: 20px; */
+ padding:20px; 
+ background: black;;
+  /* border: 1px solid rgb(134, 188, 37); */
+    margin: 0;
+    width: 95%;  
+}
+
+#mydiv p{ margin:0!important;
+  font-size: 21px;}
+.microphonebutton{
+
+padding-top: 5px;
+/* padding-left: 1200px; */
+}
+.microphonebutton{
+  display:inline-block;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+}
+.chartWrapper{
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 70%;
+  text-align: center;
+ 
+}
+
+.notRec{
+  /* background-color: darkred; */
+  text-align: center;
+  -webkit-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+.Rec{
+	animation-name: pulse;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes pulse{
+	0%{
+		box-shadow: 0px 0px 5px 0px rgba(134,188,37,.3);
+	}
+	65%{
+		box-shadow: 0px 0px 5px 50px rgba(134,188,37,.5);
+	}
+	90%{
+		box-shadow: 0px 0px 5px 50px rgba(134,188,37,0);
+  }
+  
+}
+
+@keyframes glowing {
+  0% { background-color: #86BC25  ; box-shadow: 0 0 10px #86BC25; }
+  50% { background-color: #43B02A ; box-shadow: 0 0 80px #86BC25; }
+  100% { background-color: rgb(55, 138, 34) ; box-shadow: 0 0 10px #86BC25; }
+}

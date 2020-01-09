@@ -1,0 +1,11 @@
+click==6.7
+Flask==1.0.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+Werkzeug==0.14.1
+requests==2.18.4
+dialogflow==0.6.0
+google-api-core==1.4.1
+protobuf==3.10.0
+pandas==0.25.3

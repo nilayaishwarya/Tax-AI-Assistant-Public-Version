@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" href="favicon.ico" sizes="16x16">
+  <title>Deloitte Tax Assistant!</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleparticle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- <script  src="./scriptparticle.js"></script> -->
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+
+    #container>#canvas {
+      border-radius: 16px;
+      margin: 64px;
+      padding: 16px;
+    }
+
+    canvas {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+  <style type="text/css">
+    /* Chart.js */
+    @keyframes chartjs-render-animation {
+      from {
+        opacity: .99
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .chartjs-render-monitor {
+      animation: chartjs-render-animation 1ms
+    }
+
+    .chartjs-size-monitor,
+    .chartjs-size-monitor-expand,
+    .chartjs-size-monitor-shrink {
+      position: absolute;
+      direction: ltr;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      pointer-events: none;
+      visibility: hidden;
+      z-index: -1
+    }
+
+    .chartjs-size-monitor-expand>div {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      left: 0;
+      top: 0
+    }
+
+    .chartjs-size-monitor-shrink>div {
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      left: 0;
+      top: 0
+    }
+  </style>
+</head>
+
+<body>
+  <img id="logo" src="deloitte_logo.png" alt="Deloitte Logo">
+
+  <div class="typewriter" id="DeloitteHeader">
+    <h1>Welcome to Deloitte Tax Assistant !</h1>
+  </div>
+
+  <p class="hints"></p>
+  <div id="container" style="width: 75%;">
+    <div class="chartjs-size-monitor">
+      <div class="chartjs-size-monitor-expand">
+        <div class=""></div>
+      </div>
+      <div class="chartjs-size-monitor-shrink">
+        <div class=""></div>
+      </div>
+    </div>
+    <!-- <canvas id="canvas" style="display: block;" width="422" height="784" class="chartjs-render-monitor"></canvas> -->
+    <canvas id="canvas" style="display: block; height: 336px; width: 673px; " width="1009" height="504"
+      class="chartjs-render-monitor"></canvas>
+  </div>
+
+  <div id="divMicrophone">
+    <div class="microphonebutton">
+      <button type="button" id="mybutton" class="btn btn-primary notRec"
+        onclick="microphone() ; dborder()"><img src="mic_icon.png" height="44" width="44" style="margin-top: 8px;"><span style="font-size:10px; color:#cccccc;"> Speak</span></button>
+    </div>
+    <div class="chartWrapper" id="chartWrapper">;
+      <div id="mydiv">
+        <p class="output"><em>.</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="particles-js">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./scriptparticle.js"></script>
+  </div>
+
+  <script>
+  document.getElementById("container").style.display = "none";
+  </script>
+
+  <script type='text/javascript' src="https://code.responsivevoice.org/responsivevoice.js?key=vtNX430M"></script>
+  <script src="customscript.js"></script>
+
+</body>
+</html>
