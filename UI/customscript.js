@@ -39,7 +39,7 @@ function dborder() {
 
 function microphone() {
   //debugger;
-  $('#DeloitteHeader').hide();
+  $('#ServerHeader').hide();
   $('#canvas').remove();
   $( "p.output" ).empty();
   $('#divMicrophone').css('margin-top', '40px');
@@ -100,7 +100,7 @@ recognition.onresult = async function (event) {
   //await plotter();
   // debugger;
 
-  textContent = "Deloitte Assistant";
+  textContent = "Assistant";
   diagnostic.textContent =  x.response;
   console.log('Confidence: ' + event.results[0][0].confidence);
 
@@ -120,7 +120,7 @@ recognition.onerror = function (event) {
 
 async function addPost(x) {
   //let response = new Object(); // "object constructor" syntax
-  var response = await fetch('https://deloitteassistantapi.azurewebsites.net/responder', {
+  var response = await fetch('https://<valueremoved>/responder', {
     method: 'POST',
     body: JSON.stringify({
       text_query: x,

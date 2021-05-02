@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Welcome to Deloitte Tax Assistant!"
+    return "Welcome to Tax Assistant!"
 
 @app.route("/responder", methods=['GET', 'POST'])
 def responder():
@@ -24,7 +24,7 @@ def responder():
     if request.method == 'POST':
         
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = 'private_key.json'
-        DIALOGFLOW_PROJECT_ID = 'testbot-256009'
+        DIALOGFLOW_PROJECT_ID = '<Data>'
         DIALOGFLOW_LANGUAGE_CODE = 'en'
         SESSION_ID = 'unique'
 
@@ -47,7 +47,7 @@ def responder():
         output = MessageToDict(test)  
 
         # Creating DataFrame Using CSV
-        datatable = pd.read_csv('DeloitteAssisstantDB.csv')
+        datatable = pd.read_csv('AssistantDB.csv')
 
         a =  {
                 'question1': None,
